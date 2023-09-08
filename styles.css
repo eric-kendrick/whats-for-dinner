@@ -1,3 +1,39 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+header {
+    background-color: #0fb9b1;
+    padding: 0.8rem 0;
+}
+ul {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-right: 1rem;
+    padding-left: 1rem;
+}
+li {
+    position: relative;
+    list-style: none;
+}
+h1 {
+    font-size: 1.1em ;
+    justify-content: center;
+}
+#add-recipe-btn {
+    font: 10px;
+    width: 110px;
+    height: 32px;
+    border-radius: 6px;
+    border-style: none;
+}
+
+
+
+
+
+
 /* font-family: 'Roboto', sans-serif;
 
 COLORS
