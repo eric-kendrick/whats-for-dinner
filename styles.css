@@ -2,6 +2,11 @@
     font-family: 'Roboto', sans-serif;
     margin: 0;
 }
+body {
+    background-image: url(assets/burger-friends.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%
+}
 header {
     background-color: #0fb9b1;
     padding: 0.8rem 0;
@@ -18,7 +23,45 @@ li {
     list-style: none;
 }
 h1 {
-    font-size: 1.1em ;
+    font-size: 1.1em;
+}
+main {
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+fieldset {
+    margin-top: 3.6rem;
+}
+legend {
+    font-size: 1.7rem;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+label {
+    font-size: 1.2em;
+    display: block;
+    margin-left: 1.4rem;
+}
+.menu-form {
+    background-color: rgba(225, 225, 225, .9);
+    width: 40%;
+    height: 60%;
+    margin-top: 2rem;
+}
+.radio {
+    margin-bottom: 1.2rem;
+    margin-right: 1rem;
+}
+.dish-selection {
+    border-style: none;
+}
+.image-panel {
+    background-color: rgba(225, 225, 225, .9);
+    width: 40%;
+    height: 60%;
+    margin-top: 2rem;
+    display: flex;
     justify-content: center;
 }
 #add-recipe-btn {
@@ -28,6 +71,20 @@ h1 {
     border-radius: 6px;
     border-style: none;
 }
+#menu-btn {
+    font: 10px;
+    width: 200px;
+    height: 36px;
+    background-color: #0fb9b1;
+    margin-left: 1.4rem;
+    border-radius: 6px;
+    border-style: none;
+}
+#cookpot {
+    width: 8rem;
+}
+
+
 
 
 
