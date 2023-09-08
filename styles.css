@@ -43,6 +43,9 @@ label {
     display: block;
     margin-left: 1.4rem;
 }
+.hidden {
+    display: none!important;
+}
 .menu-form {
     background-color: rgba(225, 225, 225, .9);
     width: 40%;
