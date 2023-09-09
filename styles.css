@@ -9,7 +9,7 @@ body {
 }
 header {
     background-color: #0fb9b1;
-    padding: 0.8rem 0;
+    padding: 0.8rem;
 }
 ul {
     font-size: 20px;
@@ -51,12 +51,14 @@ label {
     width: 40%;
     height: 60%;
     margin-top: 2rem;
+    display: flex;
 }
 .radio {
     margin-bottom: 1.2rem;
     margin-right: 1rem;
 }
 .dish-selection {
+    width: 100%;
     border-style: none;
 }
 .image-panel {
@@ -67,25 +69,60 @@ label {
     display: flex;
     justify-content: center;
 }
+.randomDish {
+    width: 100%;
+    text-align: center;
+    margin-top: 9rem;
+}
+.should-para {
+    font-size: 1.2em;
+    font-style: italic;
+}
+.dish-name {
+    font-size: 2rem;
+    font-weight: 600;
+    padding: 1rem;
+}
 #add-recipe-btn {
     font: 10px;
-    width: 110px;
-    height: 32px;
-    border-radius: 6px;
+    width: 6.8rem;
+    height: 1.8rem;
+    border-radius: 4px;
     border-style: none;
+}
+#add-recipe-btn:hover {
+    border: 1px solid rgb(82, 82, 82);
+
 }
 #menu-btn {
     font: 10px;
-    width: 200px;
-    height: 36px;
-    background-color: #0fb9b1;
+    width: 10.6rem;
+    height: 2.2rem;
+    background-color: #0fb9b1e6;
     margin-left: 1.4rem;
-    border-radius: 6px;
+    border-radius: 4px;
     border-style: none;
+}
+#menu-btn:hover {
+    border: 1px solid blue;
 }
 #cookpot {
     width: 8rem;
 }
+#dish-clear-btn {
+    font: 10px;
+    color: white;
+    width: 4.8rem;
+    height: 2rem;
+    background-color: #95a5a6e6;
+    margin: 2rem 1rem 0 18rem;
+    border-radius: 4px;
+    border-style: none;
+}
+#dish-clear-btn:hover {
+    border: 1px solid rgb(82, 82, 82);
+
+}
 
 
 
@@ -94,13 +131,7 @@ label {
 
 
 
-/* font-family: 'Roboto', sans-serif;
+/* red - #ee5253 */
 
-COLORS
-teal - #0fb9b1;
-frosted white - rgba(225, 225, 225, .9);
-grey - #95a5a6;
-red - #ee5253
 
-*/
 
