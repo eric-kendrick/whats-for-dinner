@@ -3,6 +3,7 @@ var cookpotImg = document.querySelector('#cookpot');
 var dishView = document.querySelector('.randomDish');
 
 var menuSelectBtn = document.querySelector('#menu-btn');
+var clearButton = document.querySelector('#dish-clear-btn');
 
 var sides = [
     "Sweet Potato Fries",
@@ -33,6 +34,7 @@ var meal;
 
 //-------- Event Listeners ------//
 menuSelectBtn.addEventListener('click', renderDishSelection);
+clearButton.addEventListener('click', toggleCookpot);
 
 
 
