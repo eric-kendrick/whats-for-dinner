@@ -1,9 +1,7 @@
-//------ Query selector vars for viewables -------//
 var dishName = document.querySelector('.dish-name');
 var cookpotImg = document.querySelector('#cookpot');
 var dishView = document.querySelector('.randomDish');
 
-//------- Query selectors for buttons -------//
 var menuSelectBtn = document.querySelector('#menu-btn');
 
 var sides = [
@@ -31,20 +29,14 @@ var desserts = [
 ];
 
 var currentDish;
+var meal;
 
 //-------- Event Listeners ------//
-menuSelectBtn.addEventListener('click', getDishSelection);
+menuSelectBtn.addEventListener('click', renderDishSelection);
 
 
 
 //------ Event Handler Functions ---------//
-
-// Rewrite problem: Function that when user selects a radio option and hits the
-// lets cook btn, it populates a random dish from the corresponding array
-// Data used: strings from corresponding array
-
-
-//Function for random array:
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
@@ -60,14 +52,14 @@ function toggleDish() {
 }
 
 function renderDishName() {
-    console.log(currentDish);
-    dishName.innerHTML = `${currentDish}!`;
+    if (currentDish.includes('dessert')) {
+        dishName.innerHTML = currentDish;
+    } else {
+        dishName.innerHTML = `${currentDish}!`;
+    }
 }
 
-// Function that identifies which radio btn is selected, then finds a random element from 
-// the appropriate array
-
-function getDishSelection(event) {
+function renderDishSelection(event) {
     event.preventDefault();
     var dishSelection = document.querySelector('input[name="dish-choice"]:checked').value;
     if (dishSelection === 'side') {
@@ -79,7 +71,13 @@ function getDishSelection(event) {
     if (dishSelection === 'dessert') {
         currentDish = desserts[getRandomIndex(desserts)];
     }
+    if (dishSelection === 'entire-meal') {
+        var side = sides[getRandomIndex(sides)];
+        var main = mainDishes[getRandomIndex(mainDishes)];
+        var dessert = desserts[getRandomIndex(desserts)];
+        currentDish = `${main} with a side of ${side} and ${dessert} for dessert!`;
+    }
     toggleDish();
     renderDishName(currentDish);
-
 }
+
