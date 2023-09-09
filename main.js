@@ -1,6 +1,7 @@
 var dishName = document.querySelector('.dish-name');
 var cookpotImg = document.querySelector('#cookpot');
 var dishView = document.querySelector('.randomDish');
+var radioInputs = document.querySelector('.dish-selection');
 
 var menuSelectBtn = document.querySelector('#menu-btn');
 var clearButton = document.querySelector('#dish-clear-btn');
@@ -32,13 +33,10 @@ var desserts = [
 var currentDish;
 var meal;
 
-//-------- Event Listeners ------//
+radioInputs.addEventListener('click', handleFormState);
 menuSelectBtn.addEventListener('click', renderDishSelection);
 clearButton.addEventListener('click', toggleCookpot);
 
-
-
-//------ Event Handler Functions ---------//
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
@@ -59,6 +57,10 @@ function renderDishName() {
     } else {
         dishName.innerHTML = `${currentDish}!`;
     }
+}
+
+function handleFormState() {;
+    menuSelectBtn.removeAttribute('disabled');
 }
 
 function renderDishSelection(event) {
