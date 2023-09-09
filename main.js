@@ -1,9 +1,10 @@
 //------ Query selector vars for viewables -------//
-var dishName = document.querySelector(".dish-name");
-
+var dishName = document.querySelector('.dish-name');
+var cookpotImg = document.querySelector('#cookpot');
+var dishView = document.querySelector('.randomDish');
 
 //------- Query selectors for buttons -------//
-var menuSelectBtn = document.querySelector("#menu-btn");
+var menuSelectBtn = document.querySelector('#menu-btn');
 
 var sides = [
     "Sweet Potato Fries",
@@ -32,7 +33,7 @@ var desserts = [
 var currentDish;
 
 //-------- Event Listeners ------//
-
+menuSelectBtn.addEventListener('click', getDishSelection);
 
 
 
@@ -48,6 +49,37 @@ function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
 }
 
-function randomDish() {
+function toggleCookpot() {
+    cookpotImg.classList.remove('hidden');
+    dishView.classList.add('hidden');
+}
+
+function toggleDish() {
+    cookpotImg.classList.add('hidden');
+    dishView.classList.remove('hidden');
+}
+
+function renderDishName() {
+    console.log(currentDish);
+    dishName.innerHTML = `${currentDish}!`;
+}
+
+// Function that identifies which radio btn is selected, then finds a random element from 
+// the appropriate array
+
+function getDishSelection(event) {
+    event.preventDefault();
+    var dishSelection = document.querySelector('input[name="dish-choice"]:checked').value;
+    if (dishSelection === 'side') {
+        currentDish = sides[getRandomIndex(sides)];
+    }
+    if (dishSelection === 'main') {
+        currentDish = mainDishes[getRandomIndex(mainDishes)];
+    }
+    if (dishSelection === 'dessert') {
+        currentDish = desserts[getRandomIndex(desserts)];
+    }
+    toggleDish();
+    renderDishName(currentDish);
 
 }
