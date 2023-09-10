@@ -5,8 +5,14 @@
 What's for Dinner is a web application that helps the user choose a dish and create meals. The user chooses a meal type - a side, main dish, dessert, or entire meal - and displays a random suggestion from a list of available dishes. Additionally, the application allows the user to add a dish to one of the meal types and displays the input dish and stores it for future use.
 
 ### Installation Instructions:
+To clone and run this application you will need [Git](https://git-scm.com/) installed on your computer. No dependencies are required for program execution.
+
+![Screenshot 2023-09-10 at 2 59 24 PM](https://github.com/eric-kendrick/whats-for-dinner/assets/45040241/62af1a0d-7594-4959-b1af-9814e1e5b853)
+
 
 ### Preview of App:
+
+![Screenshot 2023-09-10 at 3 01 28 PM](https://github.com/eric-kendrick/whats-for-dinner/assets/45040241/5f5c4008-cbab-4883-ac1b-264dc10dd4e3)
 
 ### Context:
 
