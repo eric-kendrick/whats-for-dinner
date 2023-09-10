@@ -1,51 +1,32 @@
-# What's for Dinner?
-
-## Overview
-
-What's for dinner? The ultimate question. You will be building an app that helps users choose a recipe and put together meals. 
-
-This Solo Challenge gives students and instructors the opportunity to get a pulse on where you are with the foundational concepts of Module 1 curriculum. Students should use this as an opportunity to challenge themselves and work completely independently. Google can (and probably should!) be used, but any other code base should not be referenced. Instructors will be able to use your work, both completion of functionality and code quality, to determine where you stand and if you are behind for this point in the module, provide supports to intervene.
-
-The spec for this project can be found [here](https://frontend.turing.edu/projects/module-1/dinner.html). 
-
-## Learning Goals
-
-- Gain experience building an application that utilizes HTML, CSS and JavaScript
-- Write HTML and CSS to match a provided comp
-- Understand how to listen to and respond to user events
-- Individualize your programming skill set
-
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
-
 # What's for Dinner? 
 
 ### Abstract:
-[//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
+
+What's for Dinner is a web application that helps the user choose a dish and create meals. The user chooses a meal type - a side, main dish, dessert, or entire meal - and displays a random suggestion from a list of available dishes. Additionally, the application allows the user to add a dish to one of the meal types and displays the input dish and stores it for future use.
 
 ### Installation Instructions:
-[//]: <> (What steps does a person have to take to get your app cloned down and running?)
 
 ### Preview of App:
-[//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
 
 ### Context:
-[//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
+
+What's for Dinner is the second solo project in Module 1 of the Turing front-end engineering program and is completed around the mid-point of the module. The scope required completion of the project within five days of kickoff. It was completed utilizing HTML, CSS and vanilla Javascript.
 
 ### Contributors:
-[//]: <> (Who worked on this application? Link to their GitHubs.)
+
+* Eric Kendrick
+        
+    [Eric's Github](https://github.com/eric-kendrick)
+
 
 ### Learning Goals:
-[//]: <> (What were the learning goals of this project? What tech did you work with?)
+
+The learning goals of this project were to utilize the skills gained throughout the first half of Module 1 to execute the following as an individual developer:
+* Gain experience building an application that utilizes HTML, CSS and JavaScript
+* Write HTML and CSS to match a provided comp
+* Understand how to listen to and respond to user events
+* Individualize your programming skill set
 
 ### Wins + Challenges:
-[//]: <> (What are 2-3 wins you have from this project? What were some challenges you faced - and how did you get over them?)
+
+The biggest challenge I faced when completing What's for Dinner was shaking off the rust and reaquainting myself with the nuances of CSS and the box model. My greatest win was the fact that I was able to build out all aspects of the project with minimal external guidance or support with all intended functionality firing successfully. 
