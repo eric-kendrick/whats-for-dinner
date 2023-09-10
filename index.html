@@ -17,7 +17,7 @@
     <main>
       <form class="menu-form">
         <fieldset class="dish-selection">
-            <legend>What are you looking for?</legend>
+            <legend>What are you looking for?<span>*</span></legend>
           </section>
           <label class="radio-label">
             <input  type="radio" name="dish-choice" value="side" class="radio"/>Side
@@ -50,6 +50,7 @@
           Recipe Name:<input type="text" name="name" class="recipe-input">
         </label>
         <button id="new-recipe-btn">ADD NEW</button>
+        <div class="add-new-error"></div>
       </form>
     </main>
   </body>
