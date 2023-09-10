@@ -5,6 +5,7 @@ var radioInputs = document.querySelector('.dish-selection');
 var newRecipeForm = document.querySelector('.recipe-form');
 var recipeTypeInput = document.querySelector('input[name="type"]');
 var recipeNameInput = document.querySelector('input[name="name"]');
+var errorDisplay = document.querySelector('.add-new-error');
 
 var menuSelectBtn = document.querySelector('#menu-btn');
 var clearButton = document.querySelector('#dish-clear-btn');
@@ -36,6 +37,7 @@ var desserts = [
 ];
 
 var currentDish;
+var newTypeArray = [];
 
 radioInputs.addEventListener('click', handleFormState);
 menuSelectBtn.addEventListener('click', renderDishSelection);
@@ -95,28 +97,28 @@ function renderDishSelection(event) {
     renderDishName(currentDish);
 }
 
+function clearRecipeInputs() {
+    recipeTypeInput.value = '';
+    recipeNameInput.value = '';
+}
+
 function addNewRecipe(event) {
     event.preventDefault();
-    var recipeError = document.querySelector('.new-recipe-error');
     var lowerCaseType = recipeTypeInput.value.toLowerCase(); 
-    if (lowerCaseType === "sides") {
+    if (lowerCaseType === 'side') {
         sides.push(recipeNameInput.value);
         dishName.innerHTML = recipeNameInput.value;
-        toggleDish();
-    }
-    if (lowerCaseType === "main dish") {
+    } else if (lowerCaseType === 'main dish') {
         mainDishes.push(recipeNameInput.value);
         dishName.innerHTML = recipeNameInput.value;
-        toggleDish();
-    }
-    if (lowerCaseType === "dessert") {
+    } else if (lowerCaseType === 'dessert') {
         desserts.push(recipeNameInput.value);
         dishName.innerHTML = recipeNameInput.value;
-        toggleDish();
+    } else {
+        errorDisplay.innerHTML = '* Sorry - please enter a Recipe Type from the choices listed above *';
     }
-    else {
-        recipeError.innerHTML = "* I'm sorry - please add a type from the dishes listed above *";
-    }
-    
+
+    toggleDish();
+    clearRecipeInputs();
 }
 
