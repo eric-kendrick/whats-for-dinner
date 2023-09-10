@@ -2,9 +2,14 @@ var dishName = document.querySelector('.dish-name');
 var cookpotImg = document.querySelector('#cookpot');
 var dishView = document.querySelector('.randomDish');
 var radioInputs = document.querySelector('.dish-selection');
+var newRecipeForm = document.querySelector('.recipe-form');
+var recipeTypeInput = document.querySelector('input[name="type"]');
+var recipeNameInput = document.querySelector('input[name="name"]');
 
 var menuSelectBtn = document.querySelector('#menu-btn');
 var clearButton = document.querySelector('#dish-clear-btn');
+var newRecipeFormBtn = document.querySelector('#add-recipe-btn');
+var addRecipeBtn = document.querySelector('#new-recipe-btn');
 
 var sides = [
     "Sweet Potato Fries",
@@ -31,11 +36,12 @@ var desserts = [
 ];
 
 var currentDish;
-var meal;
 
 radioInputs.addEventListener('click', handleFormState);
 menuSelectBtn.addEventListener('click', renderDishSelection);
 clearButton.addEventListener('click', toggleCookpot);
+newRecipeFormBtn.addEventListener('click', toggleNewRecipeForm);
+addRecipeBtn.addEventListener('click', addNewRecipe);
 
 function getRandomIndex(array) {
     return Math.floor(Math.random() * array.length);
@@ -49,6 +55,10 @@ function toggleCookpot() {
 function toggleDish() {
     cookpotImg.classList.add('hidden');
     dishView.classList.remove('hidden');
+}
+
+function toggleNewRecipeForm() {
+    newRecipeForm.classList.remove('hidden');
 }
 
 function renderDishName() {
@@ -83,5 +93,30 @@ function renderDishSelection(event) {
     }
     toggleDish();
     renderDishName(currentDish);
+}
+
+function addNewRecipe(event) {
+    event.preventDefault();
+    var recipeError = document.querySelector('.new-recipe-error');
+    var lowerCaseType = recipeTypeInput.value.toLowerCase(); 
+    if (lowerCaseType === "sides") {
+        sides.push(recipeNameInput.value);
+        dishName.innerHTML = recipeNameInput.value;
+        toggleDish();
+    }
+    if (lowerCaseType === "main dish") {
+        mainDishes.push(recipeNameInput.value);
+        dishName.innerHTML = recipeNameInput.value;
+        toggleDish();
+    }
+    if (lowerCaseType === "dessert") {
+        desserts.push(recipeNameInput.value);
+        dishName.innerHTML = recipeNameInput.value;
+        toggleDish();
+    }
+    else {
+        recipeError.innerHTML = "* I'm sorry - please add a type from the dishes listed above *";
+    }
+    
 }
 
